@@ -1,5 +1,6 @@
+let productArray = [];
+let cartList = [];
 // function to fetch products from database
-
 function fetchData() {
   fetch((url = "https://arcane-spire-99175.herokuapp.com/show-products/"))
     .then((response) => {
@@ -14,6 +15,7 @@ function fetchData() {
       //   Get products section from HTML
       let productList = document.querySelector("#products");
       // loop over the data
+      productArray = data;
       data.forEach((product) => {
         // Create a new html card for each product
         let productItem = `
@@ -23,10 +25,10 @@ function fetchData() {
 
               </div>
               <div class="product-info">
-              <h4>${product.cellphone_names}</h4>
-              <h4>${product.prices}</h4>
-              <p><button>Add to Cart</button></p>
-              </div>
+              <h4 id="${product.cellphone_names}">${product.cellphone_names}</h4>
+              <h4 id="${product.prices}">${product.prices}</h4>
+              <p><button onclick="add_to_cart(${product.ID})">Add to Cart</button></p>
+              </div>    
           </div>
       `;
         // add new card to the products section
@@ -96,3 +98,39 @@ function login() {
 }
 
 // Function for cart
+
+function add_to_cart(id) {
+  let cartItem = productArray.filter((product) => {
+    return product.ID == id;
+  });
+  productCount = cartList.push(cartItem[0]);
+  console.log(cartList);
+  console.log(productCount);
+}
+
+// cart system
+
+let modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+let btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
