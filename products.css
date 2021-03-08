@@ -44,15 +44,15 @@ body {
 
 .modal {
   display: none;
-  position: fixed; 
-  z-index: 1; 
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */
@@ -61,7 +61,7 @@ body {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 80%;
 }
 
 /* The Close Button */
@@ -77,4 +77,48 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+div#items {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 20px;
+}
+
+.total-price {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-around;
+}
+
+#total {
+  position: relative;
+  left: 100px;
+}
+
+.removebutton {
+  position: relative;
+  top: -25px;
+  left: 310px;
+}
+
+.total-results {
+  position: relative;
+  text-align: center;
+}
+
+.price {
+  position: relative;
+  bottom: 42px;
+  left: 149px;
+}
+
+.checkout {
+  position: relative;
+  width: 110px;
+  height: 31px;
+  position: relative;
 }

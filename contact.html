@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
+    <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="products.css" />
-    <link rel="stylesheet" href="footer.css">
-
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact</title>
   </head>
   <body>
     <!--Navbar section-->
@@ -32,13 +29,12 @@
         </ul>
       </div>
       <div class="cart-search">
-        <div class="cart-cont" id="cart">
-          <a class="btn" id="myBtn"><img
+        <div class="cart-cont">
+          <img
             src="images/icons8-shopping-cart-64.png"
             alt="Cart"
-            class="cart-pic" onclick=""
-          /></a>
-          <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+            class="cart-pic"
+          />
         </div>
         <div class="search-cont">
           <img
@@ -50,31 +46,26 @@
       </div>
     </nav>
 
-    <!--Modal-->
-
-    <div id="myModal" class="modal">
-
-      <!-- Modal content -->
-      <div class="modal-content" id="content">
-        <span class="close">&times;</span>
-          <div class="total-price">
-            <div class="total-results">
-              <h1>Total Price:R </h1>
-              <h1 class="price">0</h1>
-              <button class="checkout" onclick="checkout();">Checkout</button>
-            </div>
-          <div id="contents"></div>
-          </div>
-        
-      </div>
-    
+      <!---Contact Form Section----->
+      <div id="contact" class="contact-sec">
+        <form  action="https://formspree.io/f/xrgorqwy" method="POST"  id="form"class="form">
+            <input class="fname" type="text" id="fname" name="First_name" placeholder="Name" required><br>
+            <input class="sname" type="text" id="lname" name="Last_name" placeholder="Surname" required><br>
+            <input class="email" type="text" id="email" name="email" placeholder="Email" required><br>
+            <textarea placeholder="Message" name="message" required></textarea><br>
+            <input class="send" type="submit" value="send">
+        </form>
     </div>
-
-    <!--Products section-->
     
-    <section id="products">
 
-    </section>
+    <div class="cont">
+        <div class="cont1"><a href="#"><img class="pic1" src="images/email.png" alt="Email"></a></div>
+        <div class="cont4">Plaintronics@cellular.co.za</div>
+        <div class="cont2"><a href="#"><img class="pic2" src="images/pin.png" alt="Pin"></a></div>
+        <div class="cont4">30 Broadway Street Claire, Suite 330</div> 
+        <div class="cont3"><a href="tel:0616199861"><img class="pic3" src="images/vintage-telephone.png" alt="Telephone"></a></div>
+        <div class="cont4">+2721345218</div>
+    </div>
 
       <!--Footer section-->
 
@@ -124,7 +115,6 @@
           <img src="images/payments.png" alt="payments">
         </div>
       </footer>
-
-    <script  type="text/javascript" src="main.js"></script>
+      <script  type="text/javascript" src="main.js"></script>
   </body>
 </html>
