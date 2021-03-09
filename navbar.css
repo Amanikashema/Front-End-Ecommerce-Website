@@ -1,72 +1,88 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    line-height: 24px;
-    font-size: 14px;
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 14px;
 }
 
-.nav-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 10px;
-    border-bottom: 2px solid rgb(235, 232, 232);
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 10px;
+  border-bottom: 2px solid rgb(235, 232, 232);
 }
 
-.cart-pic{
-    width: 30px;
-    height: 30px;
+.cart-pic {
+  width: 30px;
+  height: 30px;
 }
 
-.search-pic{
-    width: 30px;
-    height: 30px;
+.search-pic {
+  width: 30px;
+  height: 30px;
 }
 
-.cart-search{
-    display: flex;
-    flex-direction: row;
- 
+.cart-search {
+  display: flex;
+  flex-direction: row;
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
+.links {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-top: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.links li a {
+  margin-left: 50px;
+  text-decoration: none;
+  color: black;
+}
+
+.links li a:hover {
+  color: #007bff;
+}
+
+.logo {
+  width: 100px;
+  height: 80px;
+}
+
+.cart-cont {
+  padding-top: 23px;
+}
+
+.search-cont {
+  padding-top: 23px;
+}
+
+/* navbar hamburger section*/
+
+.icon {
+  display: none;
+  height: 34px;
+  width: 59px;
+  top: 22px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .links {
     padding-top: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.links li a{
-    margin-left: 50px;
-    text-decoration: none;
-    color: black;
-}
-
-.links li a:hover{
-    color:#007bff;
-}
-
-.logo{
-    width: 100px;
-    height: 80px;
-}
-
-.cart-cont{
-    padding-top: 23px;
-}
-
-.search-cont{
-    padding-top: 23px;
-}
-
-
-@media (max-width:360px) {
-    
+  }
 }
