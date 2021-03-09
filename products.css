@@ -74,7 +74,7 @@ body {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #007bff;
   text-decoration: none;
   cursor: pointer;
 }
@@ -90,8 +90,8 @@ div#items {
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 50%;
-  justify-content: space-around;
+  width: 84%;
+  justify-content: space-evenly;
 }
 
 #total {
@@ -120,5 +120,39 @@ div#items {
   position: relative;
   width: 110px;
   height: 31px;
-  position: relative;
+  left: 60px;
+}
+
+.add_cart {
+  padding: 4px 9px;
+  border: 1px solid #0087ff;
+  border-radius: 9px;
+}
+
+.add_cart:hover {
+  background-color: #007bff;
+}
+
+.removebutton {
+  padding: 4px 9px;
+  border: 1px solid #0087ff;
+  border-radius: 9px;
+}
+
+.removebutton:hover {
+  background-color: #007bff;
+}
+
+.checkout {
+  padding: 4px 9px;
+  border: 1px solid #0087ff;
+  border-radius: 9px;
+}
+
+.checkout:hover {
+  background-color: #007bff;
+}
+
+#lblCartCount {
+  color: #007bff;
 }

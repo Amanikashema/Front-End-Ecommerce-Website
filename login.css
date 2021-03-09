@@ -57,24 +57,24 @@ body {
   position: relative;
   left: 332px;
   top: 40px;
+  padding: 4px 9px;
+  border: 1px solid #0087ff;
+  border-radius: 9px;
 }
 
 .submit-button:hover {
   background-color: #007bff;
-  cursor: pointer;
-  width: 88px;
-  height: 30px;
 }
 
 .create-account {
   position: relative;
   left: 500px;
   top: 123px;
+  padding: 4px 9px;
+  border: 1px solid #0087ff;
+  border-radius: 9px;
 }
 
 .create-account:hover {
   background-color: #007bff;
-  width: 170px;
-  height: 30px;
-  cursor: pointer;
 }

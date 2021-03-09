@@ -26,8 +26,8 @@ function fetchData() {
               </div>
               <div class="product-info">
               <h4 id="${product.cellphone_names}">${product.cellphone_names}</h4>
-              <h4 id="${product.prices}">${product.prices}</h4>
-              <p><button onclick="add_to_cart(${product.ID})">Add to Cart</button></p>
+              <h4 id="${product.prices}">R${product.prices}</h4>
+              <p><button class="add_cart" onclick="add_to_cart(${product.ID})">Add to Cart</button></p>
               </div>    
           </div>
       `;
@@ -97,38 +97,106 @@ function login() {
   }
 }
 
+// cart count
+
+function cartCount() {
+  let x = productCount;
+  document.getElementById("lblCartCount").innerHTML = x;
+}
+
 // Function for cart
 
 function add_to_cart(id) {
+  let modal = document.getElementById("contents");
   let cartItem = productArray.filter((product) => {
     return product.ID == id;
   });
   productCount = cartList.push(cartItem[0]);
+  let selectedItems = cartItem[0];
+
+  let cart_stuff = `
+  <div class="opened-modal-content">
+  <div id="items${id}"  product-prices=${selectedItems.prices}>${selectedItems.cellphone_names} :R${selectedItems.prices}<div> 
+  <button class="removebutton" onclick="removeItems(${id})">Remove Item</button>
+  </div>
+  `;
+
+  modal.innerHTML += cart_stuff;
+
   console.log(cartList);
   console.log(productCount);
+
+  // total price calculation
+
+  function calculateTotalPrice() {
+    let totalValue = document.getElementsByClassName("price")[0];
+    let num1 = parseInt(totalValue.innerHTML);
+    let num2 = document
+      .getElementById("items" + id)
+      .getAttribute("product-prices");
+
+    let totalAmount = parseInt(num1) + parseInt(num2);
+    totalValue.innerHTML = totalAmount;
+    console.log(totalValue);
+  }
+  calculateTotalPrice();
+
+  cartCount();
 }
 
-// cart system
+// checkout section
+function checkout() {
+  let totals = document.getElementsByClassName("price")[0].innerHTML;
+  alert(`Thankyou for purchasing Your total is R${totals}`);
+  let clear = "";
+  let x = document.getElementById("contents");
+  x.innerHTML = clear;
+
+  let f = productCount - productCount;
+
+  document.getElementById("lblCartCount").innerHTML = f;
+  window.location.href = "./index.html";
+}
+
+// remove items on checkoutlist
+
+function removeItems(id) {
+  let recietTotal = document.getElementsByClassName("price")[0];
+  let y = parseInt(recietTotal.innerHTML);
+  console.log(y);
+  let x = document.getElementById("items" + id).getAttribute("product-prices");
+  let total = parseInt(y) - parseInt(x);
+
+  if (total <= -1) {
+    alert("something went wrong");
+    window.location.reload();
+  }
+
+  recietTotal.innerHTML = total;
+  console.log(total);
+  document.getElementById("items" + id).remove();
+
+  if (total == 0) {
+    window.location.href = "./index.html";
+  }
+}
+
+// Modal system for the cart
 
 let modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
 let btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
 };
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
