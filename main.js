@@ -125,6 +125,7 @@ function add_to_cart(id) {
 
   console.log(cartList);
   console.log(productCount);
+  console.log(cartItem);
 
   // total price calculation
 
@@ -211,5 +212,6 @@ function hamBurger() {
   navs.forEach((nav) => nav.classList.toggle("Navbar__ToggleShow"));
 }
 
-document.querySelector('.Navbar__Link-toggle')
-  .addEventListener('click', classToggle);
+document
+  .querySelector(".Navbar__Link-toggle")
+  .addEventListener("click", classToggle);

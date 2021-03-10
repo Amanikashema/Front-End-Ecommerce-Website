@@ -89,7 +89,7 @@ textarea {
   margin-top: -214px;
   position: relative;
   bottom: 55px;
-  left: 240px;
+  left: 12%;
 }
 
 .cont1 {
@@ -109,7 +109,7 @@ textarea {
   bottom: 63px;
   left: 50px;
   font-size: 15px;
-  color:  #007bff;
+  color: #007bff;
 }
 
 .pic1 {
@@ -125,4 +125,21 @@ textarea {
 .pic3 {
   width: 30px;
   height: 30px;
+}
+
+@media (max-width: 768px) {
+  .cont {
+    width: 25%;
+    padding-left: 0px;
+    margin-top: -237px;
+    position: relative;
+    bottom: 38px;
+    left: 2%;
+  }
+
+  .form {
+    left: 37%;
+    top: 9%;
+    width: 32%;
+  }
 }

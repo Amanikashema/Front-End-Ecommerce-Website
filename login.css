@@ -78,3 +78,34 @@ body {
 .create-account:hover {
   background-color: #007bff;
 }
+
+@media (max-width: 768px) {
+  .register_new {
+    left: -250px;
+    width: 731px;
+    margin-top: 73px;
+  }
+
+  .login {
+    position: relative;
+    top: 28px;
+    right: 247px;
+    width: 731px;
+  }
+
+  .col-main {
+    margin-bottom: 150px;
+    flex-direction: column;
+    width: 0px;
+  }
+
+  .create-account {
+    left: 576px;
+    top: -8px;
+  }
+
+  .submit-button {
+    left: 386px;
+    top: -8px;
+  }
+}

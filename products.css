@@ -156,3 +156,30 @@ div#items {
 #lblCartCount {
   color: #007bff;
 }
+
+@media (max-width: 768px) {
+  .prodcts-images {
+    position: relative;
+    left: -79px;
+  }
+
+  .product-card {
+    width: 344px;
+  }
+
+  .modal-content {
+    width: 75%;
+    position: relative;
+    right: 60px;
+  }
+
+  .total-results {
+    text-align: center;
+    position: relative;
+    right: 58px;
+  }
+
+  .removebutton {
+    left: 210px;
+  }
+}

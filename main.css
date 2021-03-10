@@ -247,3 +247,87 @@ body {
   color: #007bff;
 }
 
+@media (max-width: 768px) {
+  .slide img {
+    width: 454px;
+    height: 540px;
+    object-fit: cover;
+  }
+
+  .slide {
+    padding-top: 15px;
+  }
+
+  .side-image {
+    left: 470px;
+    bottom: 611px;
+  }
+
+  .pic1 {
+    width: 274px;
+    height: 266px;
+    object-fit: cover;
+  }
+
+  .manual-navigation {
+    display: none;
+  }
+
+  .headphone {
+    width: 733px;
+  }
+
+  .adverts {
+    position: relative;
+    bottom: 131px;
+    left: -3px;
+  }
+
+  .banner-1 {
+    margin-left: 15px;
+    position: relative;
+    bottom: 156px;
+  }
+
+  .banner-img {
+    width: 454px;
+    height: 428px;
+    object-fit: cover;
+  }
+
+  .banner-img1 {
+    height: 209px;
+    width: 274px;
+  }
+
+  .double {
+    bottom: 590px;
+    left: 474px;
+  }
+
+  .service-hub {
+    position: relative;
+    bottom: 190px;
+  }
+
+  .service-menu {
+    margin-top: -181px;
+    height: 990px;
+    margin-left: 17px;
+    width: 734px;
+  }
+
+  .feature {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 733px;
+    margin-left: 17px;
+  }
+
+  
+}
+
+@media (max-width:360px){
+  
+}

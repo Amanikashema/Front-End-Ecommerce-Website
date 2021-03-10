@@ -63,3 +63,34 @@
   top: -10px;
   left: 13px;
 }
+
+@media (max-width: 768px) {
+  .footer-section {
+    margin-top: 18px;
+  }
+
+  .secure {
+    width: 50%;
+    position: relative;
+    left: 114px;
+  }
+
+  .footer-wrapper {
+    width: auto;
+    margin-left: auto;
+  }
+
+  .footer-container2 {
+    position: relative;
+    left: 64px;
+  }
+
+  .footer-container3 h3 {
+    position: relative;
+    left: 14px;
+  }
+
+  .social-icon {
+    width: 112%;
+  }
+}

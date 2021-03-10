@@ -85,4 +85,27 @@ body {
   .links {
     padding-top: 13px;
   }
+
+  .logo {
+    width: 63px;
+    height: 57px;
+  }
+
+  .navbar {
+    position: relative;
+    left: -56px;
+    top: -8px;
+  }
+
+  .cart-cont {
+    padding-top: 16px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
 }
