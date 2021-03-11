@@ -19,7 +19,6 @@ body {
 /**Image slider**/
 
 .slider {
-  width: 1252px;
   height: 626px;
   border-radius: 10px;
   overflow: visible;
@@ -54,7 +53,7 @@ body {
 }
 
 .slide img {
-  width: 1252px;
+  width: 67%;
   height: 626px;
 }
 
@@ -95,7 +94,7 @@ body {
 }
 
 .pic1 {
-  width: 596px;
+  width: 32%;
   height: 310px;
 }
 
@@ -103,7 +102,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  left: 1281px;
+  left: 67%;
   height: 626px;
   bottom: 587px;
   padding-left: 4px;
@@ -112,7 +111,7 @@ body {
 .headphone {
   background: black;
   display: flex;
-  width: 1140px;
+  width: 98.5%;
   justify-content: center;
   color: #007bff;
 }
@@ -130,11 +129,14 @@ body {
 
 .intro {
   height: 700px;
+  width: 100%;
+  flex: 100%;
 }
 
 .banner-img {
-  width: 682px;
+  width: 65%;
   height: 440px;
+  object-fit: cover;
 }
 
 .banner-img:hover {
@@ -143,7 +145,8 @@ body {
 
 .banner-img1 {
   height: 216px;
-  width: 435px;
+  width: 23%;
+  object-fit: cover;
 }
 
 .banner {
@@ -152,8 +155,16 @@ body {
 }
 
 .banner-1 {
-  margin-left: 385px;
-  margin-right: 841px;
+  position: relative;
+  left: 20%;
+  margin-right: 44%;
+}
+.banner-2 {
+  width: 100%;
+}
+
+.banner-3 {
+  width: 100%;
 }
 
 .double {
@@ -161,7 +172,7 @@ body {
   flex-direction: column;
   position: relative;
   bottom: 447px;
-  left: 1087px;
+  left: 57%;
   box-sizing: border-box;
 }
 
@@ -197,11 +208,18 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 1140px;
-  margin-left: 382px;
-  height: 450px;
+  width: 80%;
+  /* position: relative;
+  left: 20%; */
+  /* height: 450px; */
+  margin: 0 auto;
   margin-top: 30px;
   background: #f0f0f0;
+  padding: 5%;
+}
+
+.service {
+  display: flex;
 }
 
 .block {
@@ -234,8 +252,9 @@ body {
 .feature {
   display: flex;
   margin-top: 40px;
-  width: 1140px;
-  margin-left: 383px;
+  width: 100%;
+  margin: 40px auto;
+  width: 90%;
 }
 
 .space {
@@ -284,7 +303,7 @@ body {
   }
 
   .banner-1 {
-    margin-left: 15px;
+    margin-left: -18%;
     position: relative;
     bottom: 156px;
   }
@@ -313,8 +332,8 @@ body {
   .service-menu {
     margin-top: -181px;
     height: 990px;
-    margin-left: 17px;
-    width: 734px;
+    margin-left: 2.5%;
+    width: 85%;
   }
 
   .feature {
@@ -324,10 +343,7 @@ body {
     width: 733px;
     margin-left: 17px;
   }
-
-  
 }
 
-@media (max-width:360px){
-  
+@media (max-width: 360px) {
 }
