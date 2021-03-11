@@ -45,7 +45,7 @@ fetchData();
 function registerUser() {
   const inputs = document.getElementsByTagName("input");
 
-  fetch((url = "http://127.0.0.1:5000/register_user/"), {
+  fetch((url = "https://arcane-spire-99175.herokuapp.com/register_user/"), {
     method: "POST",
     body: JSON.stringify({
       name: inputs[0].value,
@@ -68,23 +68,23 @@ function registerUser() {
 }
 
 // function to login
+let users = [];
 
+fetch("https://arcane-spire-99175.herokuapp.com/show-records/")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    users = data;
+  });
 function login() {
-  let users = [];
-
-  fetch("http://127.0.0.1:5000/show-records/")
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      users = data;
-    });
   let inputs = document.getElementsByTagName("input");
 
   let email = inputs[0].value;
   let password = inputs[1].value;
+  console.log(email, password);
 
   let log = users.filter((user) => {
-    return user.email == email && user.password == password ? true : false;
+    return user.email == email && user.password == password;
   });
 
   console.log(log);
